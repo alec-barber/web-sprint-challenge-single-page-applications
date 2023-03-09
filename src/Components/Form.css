@@ -1,0 +1,42 @@
+.form {
+    width: 300px;
+    background-color: rgb(225, 20, 5);
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 3px;
+    margin: 2% 40%;
+    box-shadow: 2px 2px 8px 3px rgb(94, 94, 94);
+    /* display: flex;
+    flex-flow:column wrap;
+    align-items: center; */
+}
+
+.form h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.form h3 {
+    color: white;
+    font-size: 2rem;
+}
+
+.form img {
+    border-radius: 5px;
+}
+
+.formContainer {
+    background-color: rgb(241, 241, 241);
+    padding: 5px;
+    border-bottom: solid 1px black;
+    border-radius: 2px;
+    margin: 1% 1%;
+}
+
+.innerContainer {
+    background-color: white;
+    display: flex;
+    flex-flow: column wrap;
+    align-items:flex-end;
+}
