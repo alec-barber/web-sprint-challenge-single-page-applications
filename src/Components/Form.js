@@ -3,10 +3,13 @@ import React from "react";
 import pizza from "./Pizza.jpg"
 
 export default function Form (props) {
-const { onChange, pizzaPreferences, onSubmit } = props
+const { onChange, pizzaPreferences, onSubmit, buttonDisabled, errors } = props
 
     return (
         <div className='form'>
+            { errors.name.length > 0 && <p className="error">{errors.name}</p> }
+            { errors.size.length > 0 && <p className="error">{errors.size}</p> }
+            { errors.sauce.length > 0 && <p className="error">{errors.sauce}</p> }
             <h2>Pizza Builder</h2>
             <img src={pizza} alt='pizza' />
             <div>
@@ -98,7 +101,7 @@ const { onChange, pizzaPreferences, onSubmit } = props
                             <input name="quantity" type="number" placeholder="1" min="1" max="10" onChange={onChange} value={pizzaPreferences.quantity} />
                         </label>
                         <div className='orderButton'>
-                            <button id='order-button'>
+                            <button id='order-button' disabled={buttonDisabled}>
                                 <h4>Add to Order</h4>
                                 <p>$17.99</p>
                             </button>

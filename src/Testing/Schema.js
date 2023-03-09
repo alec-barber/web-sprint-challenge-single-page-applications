@@ -3,14 +3,14 @@ import * as yup from 'yup'
 const formSchema = yup.object().shape({
     name: yup
       .string()
+      .min(2, "name must be at least 2 characters")
       .required("You must include a name."),
-    email: yup
+    size: yup
       .string()
-      .email("Please provide a valid email address.")
-      .required("You must include an email address."),
-    role: yup
+      .required("You must choose a size."),
+    sauce: yup
       .string()
-      .required('You must choose a role.')
+      .required('You must choose a sauce.')
   });
 
 export default formSchema
