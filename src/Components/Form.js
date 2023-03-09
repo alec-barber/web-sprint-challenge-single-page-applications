@@ -14,13 +14,13 @@ export default function Form (props) {
                 <form id="pizza-form">
                 <div className="formContainer">
                         <h4>This order is for:</h4>
-                        <input type="text" placeholder="Name" id="name-input"/>
+                        <input name="name" type="text" placeholder="Name" id="name-input"/>
                     </div>
                     <div className="formContainer">
                         <h4>Choose Size</h4>
                         <p>Required</p>
                         <label>
-                            <select id="size-dropdown">
+                            <select name="size" id="size-dropdown">
                                 <option>-- choose a size --</option>
                                 <option>Small</option>
                                 <option>Medium</option>
@@ -52,50 +52,50 @@ export default function Form (props) {
                         <p>Choose up to 5.</p>
                         <div className="innerContainer">
                             <label>Extra Cheese
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping1" type="checkbox" checked={false} />
                             </label>
                             <label>Sausage
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping2" type="checkbox" checked={false} />
                             </label>
                             <label>Pepperoni
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping3" type="checkbox" checked={false} />
                             </label>
                             <label>Bacon
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping4" type="checkbox" checked={false} />
                             </label>
                             <label>Ham
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping5" type="checkbox" checked={false} />
                             </label>
                             <label>Onion
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping6" type="checkbox" checked={false} />
                             </label>
                             <label>Mushroom
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping7" type="checkbox" checked={false} />
                             </label>
                             <label>Green Peppers
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping8" type="checkbox" checked={false} />
                             </label>
                             <label>Spinach
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping9" type="checkbox" checked={false} />
                             </label>
                             <label>Olives
-                                <input name="" type="checkbox" checked={false} />
+                                <input name="topping10" type="checkbox" checked={false} />
                             </label>
                         </div>
                     </div>
                     <div className="formContainer"> 
                         <h4>Choice of Substitute</h4>
                         <label>Gluten-free Crust (+$1)
-                            <input type="range" min="0" max="1" />
+                            <input name="gluten" type="range" min="0" max="1" />
                         </label>
                     </div>
                     <div className="formContainer">
                         <h4>Special Instructions</h4>
-                        <input type="text" id="special-text"/>
+                        <input name="special" type="text" id="special-text"/>
                     </div>
                     <div className="orderButtonContainer formContainer">
                         <label>Quantity:
-                            <input type="number" placeholder="1" min="1" max="10" />
+                            <input name="quantity" type="number" placeholder="1" min="1" max="10" />
                         </label>
                         <div className='orderButton'>
                             <button id='order-button'>
