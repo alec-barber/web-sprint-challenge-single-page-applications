@@ -3,7 +3,7 @@ import React from "react";
 import pizza from "./Pizza.jpg"
 
 export default function Form (props) {
-
+const { onChange, pizzaPreferences } = props
 
     return (
         <div className='form'>
@@ -14,18 +14,18 @@ export default function Form (props) {
                 <form id="pizza-form">
                 <div className="formContainer">
                         <h4>This order is for:</h4>
-                        <input name="name" type="text" placeholder="Name" id="name-input"/>
+                        <input name="name" type="text" placeholder="Name" id="name-input" onChange={onChange} value={pizzaPreferences.name} />
                     </div>
                     <div className="formContainer">
                         <h4>Choose Size</h4>
                         <p>Required</p>
                         <label>
-                            <select name="size" id="size-dropdown">
-                                <option>-- choose a size --</option>
-                                <option>Small</option>
-                                <option>Medium</option>
-                                <option>Large</option>
-                                <option>X-Large</option>
+                            <select name="size" id="size-dropdown" onChange={onChange} value={pizzaPreferences.size}>
+                                <option value="">-- choose a size --</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="X-Large">X-Large</option>
                             </select>
                         </label>
                     </div>

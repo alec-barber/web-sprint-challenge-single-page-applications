@@ -40,7 +40,7 @@ const onChange = (e) => {
         <Nav />
       </div>
       <Routes>
-        <Route path="pizza" element={<Form onChange={onChange} />} />
+        <Route path="pizza" element={<Form onChange={onChange} pizzaPreferences={pizzaPreferences} />} />
         <Route path="/" element={<Home />} />
         <Route path="help" element={""} />
       </Routes>
