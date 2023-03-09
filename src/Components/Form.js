@@ -12,6 +12,10 @@ export default function Form (props) {
             <div>
                 <h3>Create Your Own Pizza</h3>
                 <form id="pizza-form">
+                <div className="formContainer">
+                        <h4>This order is for:</h4>
+                        <input type="text" placeholder="Name" id="name-input"/>
+                    </div>
                     <div className="formContainer">
                         <h4>Choose Size</h4>
                         <p>Required</p>
