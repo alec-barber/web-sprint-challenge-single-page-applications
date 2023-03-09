@@ -2,6 +2,7 @@ import "./App.css"
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import * as yup from 'yup'
+import axios from "axios";
 import Form from "./Components/Form";
 import Nav from "./Components/Nav";
 import Food from "./Components/Food";
@@ -61,6 +62,13 @@ useEffect( () => {
 const onSubmit = (e) => {
   e.preventDefault()
   console.log("Submitted")
+  axios.post('https://reqres.in/api/order', pizzaPreferences)
+    .then( (res) => {
+      console.log(res)  
+      // setUserList([...userList, res.data])
+    })
+    .catch( err => console.error(err))
+    .finally(() => setPizzaPreferences({pizzaPreferencesBlank}))
 }
 
   return (

@@ -61,3 +61,7 @@
 .orderButton h4, .orderButton p{
     color: white;
 }
+
+.orderButton button:disabled {
+    background-color: rgb(77, 77, 77);
+}
