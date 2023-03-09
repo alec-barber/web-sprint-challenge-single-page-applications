@@ -52,50 +52,50 @@ const { onChange, pizzaPreferences } = props
                         <p>Choose up to 5.</p>
                         <div className="innerContainer">
                             <label>Extra Cheese
-                                <input name="topping1" type="checkbox" checked={false} />
+                                <input name="extraCheese" type="checkbox" onChange={onChange} checked={pizzaPreferences.extraCheese}  />
                             </label>
                             <label>Sausage
-                                <input name="topping2" type="checkbox" checked={false} />
+                                <input name="sausage" type="checkbox" onChange={onChange} checked={pizzaPreferences.sausage} />
                             </label>
                             <label>Pepperoni
-                                <input name="topping3" type="checkbox" checked={false} />
+                                <input name="pepperoni" type="checkbox" onChange={onChange} checked={pizzaPreferences.pepperoni} />
                             </label>
                             <label>Bacon
-                                <input name="topping4" type="checkbox" checked={false} />
+                                <input name="bacon" type="checkbox" onChange={onChange} checked={pizzaPreferences.bacon} />
                             </label>
                             <label>Ham
-                                <input name="topping5" type="checkbox" checked={false} />
+                                <input name="ham" type="checkbox" onChange={onChange} checked={pizzaPreferences.ham} />
                             </label>
                             <label>Onion
-                                <input name="topping6" type="checkbox" checked={false} />
+                                <input name="onion" type="checkbox" onChange={onChange} checked={pizzaPreferences.onion} />
                             </label>
                             <label>Mushroom
-                                <input name="topping7" type="checkbox" checked={false} />
+                                <input name="mushroom" type="checkbox" onChange={onChange} checked={pizzaPreferences.mushroom} />
                             </label>
                             <label>Green Peppers
-                                <input name="topping8" type="checkbox" checked={false} />
+                                <input name="greenPeppers" type="checkbox" onChange={onChange} checked={pizzaPreferences.greenPeppers} />
                             </label>
                             <label>Spinach
-                                <input name="topping9" type="checkbox" checked={false} />
+                                <input name="spinach" type="checkbox" onChange={onChange} checked={pizzaPreferences.spinach} />
                             </label>
                             <label>Olives
-                                <input name="topping10" type="checkbox" checked={false} />
+                                <input name="olives" type="checkbox" onChange={onChange} checked={pizzaPreferences.olives} />
                             </label>
                         </div>
                     </div>
                     <div className="formContainer"> 
                         <h4>Choice of Substitute</h4>
                         <label>Gluten-free Crust (+$1)
-                            <input name="gluten" type="range" min="0" max="1" />
+                            <input name="gluten" type="range" min="0" max="1" onChange={onChange} value={pizzaPreferences.gluten} />
                         </label>
                     </div>
                     <div className="formContainer">
                         <h4>Special Instructions</h4>
-                        <input name="special" type="text" id="special-text"/>
+                        <input name="special" type="text" id="special-text" onChange={onChange} value={pizzaPreferences.special} />
                     </div>
                     <div className="orderButtonContainer formContainer">
                         <label>Quantity:
-                            <input name="quantity" type="number" placeholder="1" min="1" max="10" />
+                            <input name="quantity" type="number" placeholder="1" min="1" max="10" onChange={onChange} value={pizzaPreferences.quantity} />
                         </label>
                         <div className='orderButton'>
                             <button id='order-button'>
