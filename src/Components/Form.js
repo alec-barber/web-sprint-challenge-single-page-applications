@@ -11,12 +11,12 @@ export default function Form (props) {
             <img src={pizza} alt='pizza' />
             <div>
                 <h3>Create Your Own Pizza</h3>
-                <form>
+                <form id="pizza-form">
                     <div className="formContainer">
                         <h4>Choose Size</h4>
                         <p>Required</p>
                         <label>
-                            <select>
+                            <select id="size-dropdown">
                                 <option>-- choose a size --</option>
                                 <option>Small</option>
                                 <option>Medium</option>
@@ -87,14 +87,14 @@ export default function Form (props) {
                     </div>
                     <div className="formContainer">
                         <h4>Special Instructions</h4>
-                        <input type="text" />
+                        <input type="text" id="special-text"/>
                     </div>
                     <div className="orderButtonContainer formContainer">
                         <label>Quantity:
                             <input type="number" placeholder="1" min="1" max="10" />
                         </label>
                         <div className='orderButton'>
-                            <button>
+                            <button id='order-button'>
                                 <h4>Add to Order</h4>
                                 <p>$17.99</p>
                             </button>
