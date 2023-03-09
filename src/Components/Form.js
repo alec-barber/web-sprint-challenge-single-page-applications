@@ -4,6 +4,8 @@ export default function Form (props) {
 
 
     return (
-        <h2>Hello!</h2>
+        <div>
+            <h2>Form</h2>
+        </div>
     )
 }
