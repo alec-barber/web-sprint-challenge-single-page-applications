@@ -34,6 +34,11 @@ const onChange = (e) => {
   setPizzaPreferences({...pizzaPreferences, [name]: updatedInfo})
 }
 
+const onSubmit = (e) => {
+  e.preventDefault()
+  console.log("Submitted")
+}
+
   return (
     <>
       <div className="header">
@@ -41,7 +46,7 @@ const onChange = (e) => {
         <Nav />
       </div>
       <Routes>
-        <Route path="pizza" element={<Form onChange={onChange} pizzaPreferences={pizzaPreferences} />} />
+        <Route path="pizza" element={<Form onChange={onChange} onSubmit={onSubmit} pizzaPreferences={pizzaPreferences} />} />
         <Route path="/" element={<Home />} />
         <Route path="help" element={""} />
       </Routes>

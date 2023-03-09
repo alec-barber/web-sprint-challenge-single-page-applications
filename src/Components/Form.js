@@ -3,7 +3,7 @@ import React from "react";
 import pizza from "./Pizza.jpg"
 
 export default function Form (props) {
-const { onChange, pizzaPreferences } = props
+const { onChange, pizzaPreferences, onSubmit } = props
 
     return (
         <div className='form'>
@@ -11,7 +11,7 @@ const { onChange, pizzaPreferences } = props
             <img src={pizza} alt='pizza' />
             <div>
                 <h3>Create Your Own Pizza</h3>
-                <form id="pizza-form">
+                <form id="pizza-form" onSubmit={onSubmit}>
                 <div className="formContainer">
                         <h4>This order is for:</h4>
                         <input name="name" type="text" placeholder="Name" id="name-input" onChange={onChange} value={pizzaPreferences.name} />
