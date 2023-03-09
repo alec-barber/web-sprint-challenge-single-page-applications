@@ -7,10 +7,10 @@ export default function Form (props) {
 
     return (
         <div className='form'>
-            <h2>Build Your Own Pizza</h2>
+            <h2>Pizza Builder</h2>
             <img src={pizza} alt='pizza' />
             <div>
-                <h3>Build Your Own Pizza</h3>
+                <h3>Create Your Own Pizza</h3>
                 <form>
                     <div className="formContainer">
                         <h4>Choose Size</h4>
@@ -89,11 +89,15 @@ export default function Form (props) {
                         <h4>Special Instructions</h4>
                         <input type="text" />
                     </div>
-                    <div className="formContainer">
-                        <input type="number" placeholder="1" min="1" max="10" />
-                        <div>
-                            <h4>Add to Order</h4>
-                            <p>$17.99</p>
+                    <div className="orderButtonContainer formContainer">
+                        <label>Quantity:
+                            <input type="number" placeholder="1" min="1" max="10" />
+                        </label>
+                        <div className='orderButton'>
+                            <button>
+                                <h4>Add to Order</h4>
+                                <p>$17.99</p>
+                            </button>
                         </div>
                     </div>
                 </form>
