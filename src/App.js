@@ -25,6 +25,7 @@ const pizzaPreferencesBlank = {
   olives: false,
   gluten: false,
   special: '',
+  quantity: 1
 }
 
 const App = () => {

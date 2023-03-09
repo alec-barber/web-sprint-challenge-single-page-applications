@@ -10,7 +10,36 @@ const formSchema = yup.object().shape({
       .required("You must choose a size."),
     sauce: yup
       .string()
-      .required('You must choose a sauce.')
+      .required('You must choose a sauce.'),
+    extraCheese: yup
+      .boolean(),
+    sausage: yup
+    .boolean(),
+    pepperoni: yup
+      .boolean(),
+    bacon: yup
+      .boolean(),
+    ham: yup
+      .boolean(),
+    onion: yup
+      .boolean(),
+    mushroom: yup
+      .boolean(), 
+    greenPeppers: yup
+      .boolean(),   
+    spinach: yup
+      .boolean(), 
+    olives: yup
+      .boolean(),
+    gluten: yup
+      .bool(),
+    special: yup
+      .string(),
+    quantity: yup
+      .number()
+      .positive()
+      .max(10, "You can only order up to 10 pizzas at a time.")
+      .required("Please select a quantity.")
   });
 
 export default formSchema
