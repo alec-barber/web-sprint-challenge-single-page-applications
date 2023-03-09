@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 const NavStyle = styled.nav`
     background: white;
@@ -28,8 +29,8 @@ export default function Nav (props) {
     return (
         <NavStyle>
             <nav>
-                <a href="/">Home</a>&nbsp;
-                <a href="">Help</a>
+                <Link to="/">Home</Link>&nbsp;
+                <Link to="help">Help</Link>
             </nav>
         </NavStyle>
     )

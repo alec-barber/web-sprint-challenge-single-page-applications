@@ -29,8 +29,10 @@ h1 {
   text-shadow: 2px 2px 4px black;
   font-size: 4rem;  
 }
-.showcase button {
+.showcase a {
   color: azure;
+  text-align: center;
+  text-decoration: none;
   width: 200px;
   background-color: rgb(225, 20, 5);
   box-shadow: 2px 2px 4px black;;
@@ -49,7 +51,7 @@ h3 {
 
 .foodOptions {
   display: flex;
-  flex-flow: row;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   border-bottom: solid 1px gray;
 }

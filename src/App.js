@@ -1,5 +1,6 @@
 import "./App.css"
 import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Form from "./Components/Form";
 import Nav from "./Components/Nav";
 import Food from "./Components/Food";
@@ -13,10 +14,11 @@ const App = () => {
       </div>
       <div className="showcase">
         <h2>Your favorite food, delivered while coding</h2>
-        <button>Pizza?</button>
+        <Link to="form">Pizza?</Link>
       </div>
       <h3>Food delivery in Gotham City</h3>
       <div className="foodOptions">
+        <Food />
         <Food />
         <Food />
         <Food />
