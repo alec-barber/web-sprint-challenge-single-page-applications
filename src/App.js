@@ -31,6 +31,7 @@ const App = () => {
 const [ pizzaPreferences, setPizzaPreferences ] = useState(pizzaPreferencesBlank)
 const [ buttonDisabled, setButtonDisabled ] = useState(true)
 const [ errors, setErrors ] = useState(pizzaPreferencesBlank)
+const [ orderList, setOrderList ] = useState([])
 
 const onChange = (e) => {
   const { name, value, checked, type } = e.target
@@ -63,9 +64,8 @@ const onSubmit = (e) => {
   e.preventDefault()
   console.log("Submitted")
   axios.post('https://reqres.in/api/order', pizzaPreferences)
-    .then( (res) => {
-      console.log(res)  
-      // setUserList([...userList, res.data])
+    .then( (res) => {  
+      setOrderList([...orderList, res.data])
     })
     .catch( err => console.error(err))
     .finally(() => setPizzaPreferences({pizzaPreferencesBlank}))
