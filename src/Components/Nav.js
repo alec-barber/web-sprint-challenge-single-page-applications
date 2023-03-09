@@ -12,7 +12,7 @@ const NavStyle = styled.nav`
 
     a {
         font-size: 1.6rem;
-        color: crimson;
+        color: rgb(225, 20, 5);
         text-decoration: none;
     }
 

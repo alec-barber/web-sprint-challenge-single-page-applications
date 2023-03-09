@@ -10,7 +10,7 @@
 }
 
 h1 {
-  color: crimson;
+  color: rgb(225, 20, 5);
   font-size: 2rem;
 }
 
@@ -32,10 +32,24 @@ h1 {
 .showcase button {
   color: azure;
   width: 200px;
-  background-color: rgb(226, 17, 2);
+  background-color: rgb(225, 20, 5);
   box-shadow: 2px 2px 4px black;;
   padding: 10px;
-  /* border: solid 1px rgb(88, 0, 0); */
+  /* border: solid 1px rgb(88, 0, 0); */ 
   border-style: none;
   border-radius: 20px;
+}
+
+h3 {
+  color:rgb(0, 0, 0);
+  font-size: 2rem;
+  padding: 0px 2px;
+  margin: 1%;
+}
+
+.foodOptions {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  border-bottom: solid 1px gray;
 }

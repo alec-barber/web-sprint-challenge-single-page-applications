@@ -1,0 +1,10 @@
+.container {
+    width: 25%;
+    padding: 5px;
+    border: solid 1px black;
+    margin: 1%;
+}
+
+img {
+    width: 100%;
+}
