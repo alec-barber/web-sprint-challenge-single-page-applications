@@ -25,7 +25,6 @@ const NavStyle = styled.nav`
 
 export default function Nav (props) {
 
-
     return (
         <NavStyle>
             <nav>
