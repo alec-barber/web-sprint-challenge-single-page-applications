@@ -34,16 +34,16 @@ const { onChange, pizzaPreferences } = props
                         <p>Required</p>
                         <div className="innerContainer">
                             <label>Original Red
-                                <input name="sauce" type="radio" />
+                                <input name="sauce" type="radio" onChange={onChange} value={'Original Red'} checked={pizzaPreferences.sauce === "Original Red"} />
                             </label>
                             <label>Garlic Ranch
-                                <input name="sauce" type="radio" />
+                                <input name="sauce" type="radio" onChange={onChange} value={'Garlic Ranch'} checked={pizzaPreferences.sauce === "Garlic Ranch"} />
                             </label>
                             <label>BBQ
-                                    <input name="sauce" type="radio" />
+                                <input name="sauce" type="radio" onChange={onChange} value={'BBQ'} checked={pizzaPreferences.sauce === "BBQ"} />
                             </label>
                             <label>Spinach Alfredo
-                                    <input name="sauce" type="radio" />
+                                <input name="sauce" type="radio" onChange={onChange} value={'Spinach Alfredo'} checked={pizzaPreferences.sauce === "Spinach Alfredo"} />
                             </label>
                         </div>
                     </div>
