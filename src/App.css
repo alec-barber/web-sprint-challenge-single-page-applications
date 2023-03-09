@@ -35,6 +35,7 @@ h1 {
   background-color: rgb(226, 17, 2);
   box-shadow: 2px 2px 4px black;;
   padding: 10px;
-  border: solid 1px rgb(88, 0, 0);
+  /* border: solid 1px rgb(88, 0, 0); */
+  border-style: none;
   border-radius: 20px;
 }
