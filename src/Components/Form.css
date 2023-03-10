@@ -41,6 +41,41 @@
     align-items:flex-end;
 }
 
+.slider {
+    width: 9%;
+    outline: none;
+    appearance: none;
+    background:
+      linear-gradient(
+          to right, 
+          green,
+          green 50%,
+          gray 50%
+      ); 
+    border-radius: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: solid 1px gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: solid 1px gray;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .orderButtonContainer {
     background-color: white;
     display: flex;

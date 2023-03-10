@@ -6,6 +6,7 @@ import axios from "axios";
 import Form from "./Components/Form";
 import Nav from "./Components/Nav";
 import Home from "./Components/Home";
+import Confirmation from './Components/Confirmation'
 import formSchema from "./Validation/Schema";
 
 const pizzaPreferencesBlank = {
@@ -22,7 +23,7 @@ const pizzaPreferencesBlank = {
   greenPeppers: false,
   spinach: false,
   olives: false,
-  gluten: false,
+  gluten: 0,
   special: '',
   quantity: 1
 }

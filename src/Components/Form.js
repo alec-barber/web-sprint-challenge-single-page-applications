@@ -15,7 +15,7 @@ const { onChange, pizzaPreferences, onSubmit, buttonDisabled, errors } = props
             <div>
                 <h3>Create Your Own Pizza</h3>
                 <form id="pizza-form" onSubmit={onSubmit}>
-                <div className="formContainer">
+                    <div className="formContainer">
                         <h4>This order is for:</h4>
                         <input name="name" type="text" placeholder="Name" id="name-input" onChange={onChange} value={pizzaPreferences.name} />
                     </div>
@@ -89,7 +89,7 @@ const { onChange, pizzaPreferences, onSubmit, buttonDisabled, errors } = props
                     <div className="formContainer"> 
                         <h4>Choice of Substitute</h4>
                         <label>Gluten-free Crust (+$1)
-                            <input name="gluten" type="range" min="0" max="1" onChange={onChange} value={pizzaPreferences.gluten} />
+                            <input name="gluten" className="slider" type="range" min="0" max="1" onChange={onChange} value={pizzaPreferences.gluten} />
                         </label>
                     </div>
                     <div className="formContainer">
