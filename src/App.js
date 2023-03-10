@@ -1,13 +1,12 @@
 import "./App.css"
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import * as yup from 'yup'
 import axios from "axios";
 import Form from "./Components/Form";
 import Nav from "./Components/Nav";
-import Food from "./Components/Food";
 import Home from "./Components/Home";
-import formSchema from "./Testing/Schema";
+import formSchema from "./Validation/Schema";
 
 const pizzaPreferencesBlank = {
   name: '',

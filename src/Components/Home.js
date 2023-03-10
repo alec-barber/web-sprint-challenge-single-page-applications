@@ -1,8 +1,6 @@
 import "./Home.css"
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Form from "./Form";
-import Nav from "./Nav";
+import { Link } from "react-router-dom";
 import Food from "./Food";
 
 const Home = () => {
