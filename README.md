@@ -74,7 +74,7 @@ Note - your payload should look similar to the above data
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
+- [x] test that you can add text to the box
 - [ ] test that you can select multiple toppings
 - [ ] test that you can submit the form
 
@@ -106,7 +106,10 @@ Demonstrate your understanding of this sprint's concepts by answering the follow
 
 1. How would you explain form validation to someone who has never programmed before?
     It's the umpire that calls balls and strikes, without which the game would be unplayable. Similarly without form validation, the data could very quickly become unusable or lead to all sorts of security issues and bugs.
+
 1. In 1-2 sentences, define end to end testing.
+
+
 
 ## FAQs
 
