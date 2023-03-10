@@ -27,43 +27,47 @@ describe('Pizza App Testing', () => {
   describe("Filling out the form minimally and submitting it.", () => {
     it("Successful navigation to the site.", () => {
       cy.url().should("include", "localhost");
-  })
+    })
 
-  it("Submit button starts out disabled.", () => {
-      submitBtn().should("be.disabled");
-  })
+    it("Submit button starts out disabled.", () => {
+        submitBtn().should("be.disabled");
+    })
 
-  it("can type in the inputs", () => {
-      nameInput()
-          .should("have.value", "")
-          .type("John Wick")
-          .should("have.value", "John Wick")
+    it("can type in the inputs", () => {
+        nameInput()
+            .should("have.value", "")
+            .type("John Wick")
+            .should("have.value", "John Wick")
 
-      sizeInput()
-          .should("have.value", "")
-          .select("Small")
-          .should("have.value", "Small")
+        sizeInput()
+            .should("have.value", "")
+            .select("Small")
+            .should("have.value", "Small")
 
-      sauceInput()
-          .should("have.value", "Original Red")
-          .check("BBQ")
-          .should("have.value", "BBQ")
-  })
+        sauceInput()
+            .should("have.value", "Original Red")
+            .check("BBQ")
+            .should("have.value", "BBQ")
+    })
 
-  it("The submit button enables when the first three inputs are filled out.", () => {
+    it("The submit button enables when the first three inputs are filled out.", () => {
+        nameInput().type("Sons of Thunder")
+        sizeInput().select("X-Large")
+        sauceInput().check("Garlic Ranch")
+        submitBtn().should("not.be.disabled")
+    })
+
+    it("Checks to see that the form submits when the first three inputs are filled out, and submit button is clicked.", () => {
       nameInput().type("Sons of Thunder")
       sizeInput().select("X-Large")
       sauceInput().check("Garlic Ranch")
-      submitBtn().should("not.be.disabled")
+      submitBtn().click()
+      nameInput().should("have.value", "")
+    })
   })
 
-  it("The submit button enables when the first three inputs are filled out.", () => {
-    nameInput().type("Sons of Thunder")
-    sizeInput().select("X-Large")
-    sauceInput().check("Garlic Ranch")
-  })
-
-
+  describe("Filling out the form with toppings, and then submitting it works.", () => {
+    
   })
 
 })
