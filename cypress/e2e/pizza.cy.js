@@ -8,6 +8,19 @@ describe('Pizza App Testing', () => {
   const nameInput = () => cy.get('input[name=name]')
   const sizeInput = () => cy.get('select[name=size]')
   const sauceInput = () => cy.get('input[name=sauce]')
+  const toppingInput0 = () => cy.get('input[name=extraCheese]')
+  const toppingInput1 = () => cy.get('input[name=sausage]')
+  const toppingInput2 = () => cy.get('input[name=pepperoni]')
+  const toppingInput3 = () => cy.get('input[name=bacon]')
+  const toppingInput4 = () => cy.get('input[name=ham]')
+  const toppingInput5 = () => cy.get('input[name=onion]')
+  const toppingInput6 = () => cy.get('input[name=mushroom]')
+  const toppingInput7 = () => cy.get('input[name=greenPeppers]')
+  const toppingInput8 = () => cy.get('input[name=spinach]')
+  const toppingInput9 = () => cy.get('input[name=olives]')
+  const glutenInput = () => cy.get('input[name=gluten]')
+  const specialInput = () => cy.get('input[name=special]')
+  const quantityInput = () => cy.get('input[name=quantity]')
   const submitBtn = () => cy.get(`button[id="order-button"]`)
 
   // Sanity Check
@@ -21,6 +34,19 @@ describe('Pizza App Testing', () => {
     nameInput().should('exist')
     sizeInput().should('exist')
     sauceInput().should('exist')
+    toppingInput0().should('exist')
+    toppingInput1().should('exist')
+    toppingInput2().should('exist')
+    toppingInput3().should('exist')
+    toppingInput4().should('exist')
+    toppingInput5().should('exist')
+    toppingInput6().should('exist')
+    toppingInput7().should('exist')
+    toppingInput8().should('exist')
+    toppingInput9().should('exist')
+    glutenInput().should('exist')
+    specialInput().should('exist')
+    quantityInput().should('exist')
     submitBtn().should('exist')
   })
 
@@ -67,7 +93,30 @@ describe('Pizza App Testing', () => {
   })
 
   describe("Filling out the form with toppings, and then submitting it works.", () => {
-    
+    it("Successful navigation to the site.", () => {
+      cy.url().should("include", "localhost");
+    })
+
+    it("Submit button starts out disabled.", () => {
+        submitBtn().should("be.disabled");
+    })
+
+    it("can type in the inputs", () => {
+        nameInput()
+            .should("have.value", "")
+            .type("Johnny B. Goode")
+            .should("have.value", "Johnny B. Goode")
+
+        sizeInput()
+            .should("have.value", "")
+            .select("Medium")
+            .should("have.value", "Medium")
+
+        sauceInput()
+            .should("have.value", "Original Red")
+            .check("Garlic Ranch")
+            .should("have.value", "Garlic Ranch")
+    })
   })
 
 })
