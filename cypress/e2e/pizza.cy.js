@@ -23,6 +23,8 @@ describe('Pizza App Testing', () => {
   const quantityInput = () => cy.get('input[name=quantity]')
   const submitBtn = () => cy.get(`button[id="order-button"]`)
 
+  const toppings = () => cy.get('[type="checkbox"]')
+
   // Sanity Check
   it("Sanity check to make sure the tests work.", () => {
     expect(1 + 2).to.equal(3)
@@ -48,6 +50,8 @@ describe('Pizza App Testing', () => {
     specialInput().should('exist')
     quantityInput().should('exist')
     submitBtn().should('exist')
+
+    toppings().should('exist')
   })
 
   describe("Filling out the form minimally and submitting it.", () => {
@@ -116,6 +120,14 @@ describe('Pizza App Testing', () => {
             .should("have.value", "Original Red")
             .check("Garlic Ranch")
             .should("have.value", "Garlic Ranch")
+
+        toppingInput0()
+            .should("not.be.checked", false)
+            .check()
+            .should("be.checked", "extraCheese")
+
+        // toppings()
+        //     .check()
     })
   })
 
