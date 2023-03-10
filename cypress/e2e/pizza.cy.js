@@ -57,6 +57,13 @@ describe('Pizza App Testing', () => {
       submitBtn().should("not.be.disabled")
   })
 
+  it("The submit button enables when the first three inputs are filled out.", () => {
+    nameInput().type("Sons of Thunder")
+    sizeInput().select("X-Large")
+    sauceInput().check("Garlic Ranch")
+  })
+
+
   })
 
 })

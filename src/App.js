@@ -69,7 +69,7 @@ const onSubmit = (e) => {
       setOrderList([...orderList, res.data])
     })
     .catch( err => console.error(err))
-    .finally(() => setPizzaPreferences({pizzaPreferencesBlank}))
+    .finally(() => setPizzaPreferences(pizzaPreferencesBlank))
 }
 
   return (
