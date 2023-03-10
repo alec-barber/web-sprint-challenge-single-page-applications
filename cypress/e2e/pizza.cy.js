@@ -105,7 +105,7 @@ describe('Pizza App Testing', () => {
         submitBtn().should("be.disabled");
     })
 
-    it("can type in the inputs", () => {
+    it("Form submission that tests checkboxes too.", () => {
         nameInput()
             .should("have.value", "")
             .type("Johnny B. Goode")
@@ -123,11 +123,16 @@ describe('Pizza App Testing', () => {
 
         toppingInput0()
             .should("not.be.checked", false)
-            .check()
-            .should("be.checked", "extraCheese")
+            // .check()
+            // .should("be.checked", "extraCheese")
 
-        // toppings()
-        //     .check()
+        toppings()
+            .should("not.be.checked", false)
+            .check()
+            .should("be.checked")
+
+        submitBtn().click()
+        nameInput().should("have.value", "")
     })
   })
 
