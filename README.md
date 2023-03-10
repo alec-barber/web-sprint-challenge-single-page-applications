@@ -105,6 +105,7 @@ After finishing your required elements, you can push your work further. These go
 Demonstrate your understanding of this sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. How would you explain form validation to someone who has never programmed before?
+    It's the umpire that calls balls and strikes, without which the game would be unplayable. Similarly without form validation, the data could very quickly become unusable or lead to all sorts of security issues and bugs.
 1. In 1-2 sentences, define end to end testing.
 
 ## FAQs
